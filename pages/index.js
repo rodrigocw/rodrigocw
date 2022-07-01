@@ -1,6 +1,6 @@
 function Home() {
     return <div>Bem Vindo!<br/><br/>
-    Em construção...1</div>
+    Em construção...2</div>
 }
 
 export default Home
