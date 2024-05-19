@@ -194,7 +194,7 @@ export default function CurriculumVitae() {
                                 Desenvolvimento dos relatórios contábil/financeiros de venda dos empreendimentos, composto por mais de 40 relatórios integrados com o ERP. Relatórios disponibilizados em PDF e XLS. Java, Jasper Report, PL/SQL.
                             </p>
                             <p className="text-[12px] mt-2 ml-2">
-                                Desenvolvimento de um sistema para recebimento das NF-e's. Este sistema é responsável por receber os xml's das notas enviadas pelos fornecedores, arquivamento, e confirmação de recebimento na SEFAZ da UF emissora. Construção de um site para pesquisa das notas recebidas. Integração com o ERP para confirmar recebimento. Java, Oracle, PL/SQL, HTML5, CSS.
+                                {`Desenvolvimento de um sistema para recebimento das NF-e's. Este sistema é responsável por receber os xml's das notas enviadas pelos fornecedores, arquivamento, e confirmação de recebimento na SEFAZ da UF emissora. Construção de um site para pesquisa das notas recebidas. Integração com o ERP para confirmar recebimento. Java, Oracle, PL/SQL, HTML5, CSS.`}
                             </p>
                             <p className="text-[12px] mt-2 ml-2">
                                 Desenvolvimento de um Data Warehouse do erp IFS, compreendendo todo processo de compras: requisição, ordem de compra, nota fiscal e pagamento. Disponibilizando informações unificadas para análise. Oracle, PL/SQL.

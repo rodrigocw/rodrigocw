@@ -105,7 +105,7 @@ export default function CurriculumVitae() {
                         <h1 className="text-[20px] mt-4">Experiência</h1>
 
                         {data.empresas.map((item,num) => (
-                            <CardCV
+                            <CardCV key={num}
                                 empresa={item.empresa}
                                 cargo={item.cargo}
                                 periodo={item.periodo}
@@ -115,7 +115,7 @@ export default function CurriculumVitae() {
                                 bgLight={num % 2 === 0 ? "bg-gray-50" : "bg-white"}>
 
                                 {item.jobs.map((item,num) => (
-                                    <p className={item.class === "" ? "text-[12px] mt-1" : item.class }>
+                                    <p key={num} className={item.class === "" ? "text-[12px] mt-1" : item.class }>
                                         {item.job}
                                     </p>
                                 ))}                                

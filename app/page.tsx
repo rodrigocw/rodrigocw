@@ -7,7 +7,7 @@ import ImageSvg from "./components/templates/ImageSvg";
 import { useAppContext } from "./context";
 import { fontCursiva } from "./ui/fonts";
 import { useRouter } from 'next/navigation'
-import { IconCV, IconBook, IconLinkedin } from "./components/icons";
+import { IconCV, IconBook } from "./components/icons";
 
 export default function Home() {
   const { getIsDark } = useAppContext()
@@ -28,7 +28,7 @@ export default function Home() {
             ${fontCursiva.className} text-[18px]
           `}>
             <p>
-              "Ganhei meu primeiro computador com 15 anos, um MSX, como computador era um ótimo videogame, mas era possível fazer programas em basic,  de lá pra cá passei por pascal, c/c++, clipper, zim, delphi, javascript, java. Uma coisa é constante neste tempo todo, minha paixão em programar, gosto muito de desafios computacionais e ajudar as pessoas a resolvê-los. Atualmente estou aprofundando meus conhecimentos da Linguagem Rust e escrevendo o livro Desvendando o Rust, onde apresento na forma de exemplos os conceitos da linguagem, que percebo ser a substituta natural do C e C++."
+              {`"Ganhei meu primeiro computador com 15 anos, um MSX, como computador era um ótimo videogame, mas era possível fazer programas em basic,  de lá pra cá passei por pascal, c/c++, clipper, zim, delphi, javascript, java. Uma coisa é constante neste tempo todo, minha paixão em programar, gosto muito de desafios computacionais e ajudar as pessoas a resolvê-los. Atualmente estou aprofundando meus conhecimentos da Linguagem Rust e escrevendo o livro Desvendando o Rust, onde apresento na forma de exemplos os conceitos da linguagem, que percebo ser a substituta natural do C e C++."`}
             </p>
           </div>
           <div className="flex flex-col mt-4 items-center justify-center">
