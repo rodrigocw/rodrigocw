@@ -11,4 +11,9 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
+
+***** TO AURA *****
+Nome: Rodrigo Carlos Wansovicz
+Nascimento: 08/06/71
+
 -->

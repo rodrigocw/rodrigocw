@@ -7,7 +7,7 @@ import ImageSvg from "@/app/components/templates/ImageSvg";
 import { IconEnvelopeSolid, IconPhoneSolid, IconLinkedin, IconGithub } from "@/app/components/icons";
 import Link from "next/link";
 
-import { dataCV } from "@/app/components/data/cv"; '../../components/data/cv'
+import { dataCV } from "@/app/components/data/cv";
 
 export default function CurriculumVitae() {
 
@@ -24,12 +24,11 @@ export default function CurriculumVitae() {
     const h3Text = 12
 
     const data = dataCV
-    let count = 0
 
     return (
         <Layout>
             <div className={`flex`}>
-                <div className={`flex flex-col w-full max-w-[300px] bg-gradient-to-b from-blue-950 via-purple-700 to-purple-950`}>
+                <div className={`flex flex-col w-full max-w-[300px] bg-gradient-to-b from-blue-800 via-purple-700 to-purple-950`}>
                     <div className="flex justify-center items-center mt-10">
                         <ImageSvg src="/images/Rodrigo.png" width={150} height={150} alt="RodrigoCW" />
                     </div>
