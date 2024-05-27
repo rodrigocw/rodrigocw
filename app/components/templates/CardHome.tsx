@@ -5,7 +5,7 @@ interface CardHomeProps {
     imagem?: any
     url: string
     titulo: string
-    subtitulo: string
+    subtitulo?: string
     isDark: boolean
     bgDark: string
     bgLight: string
@@ -27,9 +27,12 @@ export default function CardHome(props: CardHomeProps) {
                     <h1 className="text-2xl">
                         {props.titulo}
                     </h1>
-                    <h2 className="text-1xl">
-                        {props.subtitulo}
-                    </h2>
+                    {props.subtitulo
+                        ?                    
+                            <h2 className="text-1xl">
+                                {props.subtitulo}
+                            </h2>
+                        : ''}
                 </Link>
                 {props.children}
             </div>
