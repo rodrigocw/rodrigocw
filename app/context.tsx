@@ -82,7 +82,25 @@ export function AppProvider(props: any) {
     }
 
     function getIsDark() {
-        const objParams = JSON.parse(param)
+        var themeColor = "system"
+        const objParams = JSON.parse(param || '{}'); 
+        if (param && typeof param === 'string') {
+            try {
+              const objParams = JSON.parse(param);
+              if (objParams.theme_color) {
+                themeColor = objParams.theme_color;
+              } else {
+                // Lida com o caso em que 'theme_color' não está presente no objeto
+                console.log('A propriedade "theme_color" não está presente no objeto.');
+              }
+            } catch (error) {
+              // Lida com o erro de JSON inválido
+              console.error('Erro ao analisar o JSON:', error);
+            }
+        } else {
+            console.log('O parâmetro "param" não está definido ou não é uma string.');
+        }
+        /*const objParams = JSON.parse(param)
         if (objParams.theme_color) {
             var themeColor = objParams.theme_color
         }
@@ -90,6 +108,11 @@ export function AppProvider(props: any) {
             themeColor = "system"
         }
         var themeColor = objParams.theme_color
+        if (themeColor === "system") {
+            const mediaQuery = "(prefers-color-scheme: dark)"
+            const mql = window.matchMedia(mediaQuery)
+            themeColor = mql.matches ? "dark" : "light"
+        }*/
         if (themeColor === "system") {
             const mediaQuery = "(prefers-color-scheme: dark)"
             const mql = window.matchMedia(mediaQuery)
