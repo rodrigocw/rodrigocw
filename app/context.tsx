@@ -83,6 +83,12 @@ export function AppProvider(props: any) {
 
     function getIsDark() {
         const objParams = JSON.parse(param)
+        if (objParams.theme_color) {
+            var themeColor = objParams.theme_color
+        }
+        else {
+            themeColor = "system"
+        }
         var themeColor = objParams.theme_color
         if (themeColor === "system") {
             const mediaQuery = "(prefers-color-scheme: dark)"
