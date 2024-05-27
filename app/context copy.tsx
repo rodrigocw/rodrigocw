@@ -44,7 +44,7 @@ export function AppProvider(props: any) {
             return param
         }
         else {
-            return `{"theme_color":"system","open_menu":true}`
+            return {"theme_color":"system","open_menu":true}
         }
     }
 
@@ -61,14 +61,14 @@ export function AppProvider(props: any) {
       }
 
     function alterarTema(tema: string) {
-        const objParams = JSON.parse(getParam())
+        const objParams = JSON.parse(param)
         const openMenu = objParams.open_menu
         alterarParam(tema,openMenu)
         alterarTemaTela(tema)
     }
 
     function alternarMenu() {
-        const objParams = JSON.parse(getParam())
+        const objParams = JSON.parse(param)
         const openMenu = objParams.open_menu
         const themeColor = objParams.theme_color
         alterarParam(themeColor,!openMenu)
@@ -81,17 +81,35 @@ export function AppProvider(props: any) {
     }
 
     function getOpenMenu() {
-        const objParams = JSON.parse(getParam())
+        const objParams = JSON.parse(param)
         return objParams.open_menu
     }
 
     function getThemeColor() {
-        const objParams = JSON.parse(getParam())
+        const objParams = JSON.parse(param)
         return objParams.theme_color
     }
 
     function getIsDark() {
-        const objParams = JSON.parse(getParam())
+        var themeColor = "system"
+        const objParams = JSON.parse(param || '{}'); 
+        if (param && typeof param === 'string') {
+            try {
+              const objParams = JSON.parse(param);
+              if (objParams.theme_color) {
+                themeColor = objParams.theme_color;
+              } else {
+                // Lida com o caso em que 'theme_color' não está presente no objeto
+                console.log('A propriedade "theme_color" não está presente no objeto.');
+              }
+            } catch (error) {
+              // Lida com o erro de JSON inválido
+              console.error('Erro ao analisar o JSON:', error);
+            }
+        } else {
+            console.log('O parâmetro "param" não está definido ou não é uma string.');
+        }
+        /*const objParams = JSON.parse(param)
         if (objParams.theme_color) {
             var themeColor = objParams.theme_color
         }
@@ -99,6 +117,11 @@ export function AppProvider(props: any) {
             themeColor = "system"
         }
         var themeColor = objParams.theme_color
+        if (themeColor === "system") {
+            const mediaQuery = "(prefers-color-scheme: dark)"
+            const mql = window.matchMedia(mediaQuery)
+            themeColor = mql.matches ? "dark" : "light"
+        }*/
         if (themeColor === "system") {
             const mediaQuery = "(prefers-color-scheme: dark)"
             const mql = window.matchMedia(mediaQuery)
