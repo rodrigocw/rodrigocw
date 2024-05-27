@@ -18,7 +18,7 @@ export default function RootLayout({
     let theme = ""
     const params = getParams()
     if (!params) {
-      setParams({"theme_color":"system","open_menu":true})
+      setParams({"theme_color":"light","open_menu":true})
       theme = getSystemTheme();
     }
     else {
@@ -57,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${fontRoboto} antialiased`}>
-        <script dangerouslySetInnerHTML={{__html: blockingSetParams}}></script>
+        {/*<script dangerouslySetInnerHTML={{__html: blockingSetParams}}></script>*/}
         <AppProvider>
           {children}
         </AppProvider>
