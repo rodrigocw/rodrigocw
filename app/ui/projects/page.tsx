@@ -14,7 +14,7 @@ export default function Projects() {
     return (
         <Layout>
             <CardHome
-                imagem={<ImageSvg src="/images/inkRust1.svg" width={255} height={100} alt="Rust" />}
+                imagem={<ImageSvg src="/images/logo_rust.svg" width={100} height={100} alt="Rust" />}
                 url="/ui/projects"
                 titulo="Desvendando o Rust"
                 //subtitulo="Desvendando o Rust"

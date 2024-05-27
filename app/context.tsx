@@ -44,7 +44,7 @@ export function AppProvider(props: any) {
             return param
         }
         else {
-            return `{"theme_color":"system","open_menu":true}`
+            return `{"theme_color":"dark","open_menu":true}`
         }
     }
 

@@ -43,7 +43,7 @@ export default function Home() {
           </div>
       </CardHome>
       <CardHome
-        imagem={<ImageSvg src="/images/rust (1).svg" width={100} height={100} alt="Rust" />}
+        imagem={<ImageSvg src="/images/logo_rust.svg" width={100} height={100} alt="Rust" />}
         url="/ui/projects"
         titulo="Desvendando o Rust"
         //subtitulo="Desvendando o Rust"
