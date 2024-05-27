@@ -39,6 +39,12 @@ export function AppProvider(props: any) {
     console.log(formattedString)
     console.log("param->"+param)
 
+    if (param) {
+        if (getThemeColor() === "system") {
+            alterarTema("light")
+        }
+    }
+
     function getParam() {
         if (param) {
             return param
